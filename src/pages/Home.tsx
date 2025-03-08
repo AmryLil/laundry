@@ -19,9 +19,11 @@ import {
 } from "lucide-react";
 import React from "react";
 import { MdEmail, MdMail } from "react-icons/md";
-import SplitText from "@/components/reactbits/SplitText";
+import SplitText from "@/components/Reactbits/SplitText";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import RotatingText from "@/components/reactbits/RotatingText";
+import RotatingText from "@/components/Reactbits/RotatingText";
+import CardService from "@/components/Home/CardService";
+import ScrollVelocity from "@/components/Reactbits/VelocityText";
 
 const Home = () => {
   return (
@@ -38,8 +40,8 @@ const Home = () => {
           <div className="absolute left-32 top-32 w-1/2 ">
             <div className="mb-5">
               <SplitText
-                text="LOREM IPSUN DOLOR SIT TIA SAYANGGG"
-                className="text-5xl font-semibold text-center text-slate-50 text-5xl font-bold "
+                text="Solusi cuci pakaian cepat bersih dan nyaman"
+                className=" uppercase text-center text-slate-50 text-4xl font-bold "
                 delay={150}
                 animationFrom={{
                   opacity: 0,
@@ -51,27 +53,17 @@ const Home = () => {
               />
             </div>
             <div>
-              <p className="text-slate-50 font-semibold">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
-                nostrum reiciendis, perferendis repellat architecto nemo
-                dolorem.
+              <p className="text-slate-50 font-light pr-10">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquid hic nesciunt dolore vero quae fuga, nemo voluptatibus
+                tempora ut corrupti? Totam incidunt sapiente et aliquid! Maiores
+                beatae quae pariatur modi doloribus deserunt cumque dolorem
+                fugit. Fugiat alias quisquam eum ipsa.
               </p>
-              <div className="w-fit flex justify-center items-center mt-10">
-                <h1 className="text-5xl font-bold text-sky-50">Tia</h1>
-                <RotatingText
-                  texts={["Sayangg❤️", "Cantik😍", "Lucuu😃", "Galakk😤"]}
-                  mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg font-bold text-5xl"
-                  staggerFrom={"last"}
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
-                  exit={{ y: "-120%" }}
-                  staggerDuration={0.025}
-                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  rotationInterval={2500}
-                />
-              </div>
             </div>
+            <button className="mt-5 bg-slate-50 text-slate-900 px-4 rounded-md">
+              Gasskan
+            </button>
           </div>
           <div className="flex justify-center -translate-y-12">
             <Card className="p-5 bg-cyan-500 border-transparent rounded-none">
@@ -158,6 +150,71 @@ const Home = () => {
                 Facilis culpa ipsam, numquam hic minus libero deserunt veritatis
                 iusto quod tempore similique officiis.
               </p>
+            </div>
+          </div>
+        </section>
+        <section className="mt-10 px-32 flex flex-col justify-center items-center gap-5">
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="font-bold text-xl text-cyan-600">OUR SERVICES</h1>
+            <p className="font-light text-cyan-500">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              molestias?
+            </p>
+          </div>
+          <div className=" flex  justify-center items-center gap-x-10">
+            <div className="space-y-8">
+              <CardService
+                title="Delevery"
+                description="Lorem ipsum dolor sit amet consectetur."
+                image="images/delevery.jpeg"
+                isRight={true}
+              />
+              <CardService
+                title="Delevery"
+                description="Lorem ipsum dolor sit amet consectetur."
+                image="images/delevery.jpeg"
+                isRight={true}
+              />
+              <CardService
+                title="Delevery"
+                description="Lorem ipsum dolor sit amet consectetur."
+                image="images/delevery.jpeg"
+                isRight={true}
+              />
+            </div>
+            <div className="w-[50%] h-full">
+              <img src="images/servicebanner.png" alt="" />
+            </div>
+            <div className="space-y-8">
+              <CardService
+                title="Delevery"
+                description="Lorem ipsum dolor sit amet consectetur."
+                image="images/delevery.jpeg"
+                isRight={false}
+              />
+              <CardService
+                title="Delevery"
+                description="Lorem ipsum dolor sit amet consectetur."
+                image="images/delevery.jpeg"
+                isRight={false}
+              />
+              <CardService
+                title="Delevery"
+                description="Lorem ipsum dolor sit amet consectetur."
+                image="images/delevery.jpeg"
+                isRight={false}
+              />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="relative w-full  flex items-center justify-center overflow-hidden bg-cyan-700 py-10 text-slate-50">
+            <div className="border-t-4 border-b-4 border-cyan-900 py-5 pb-3">
+              <ScrollVelocity
+                texts={["Cleanease ✦ Laundry ✦ Fast ✦ Clean ✦ Good ✦"]}
+                className="font-josefin font-semibold"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-900 via-transparent to-cyan-900 pointer-events-none"></div>
             </div>
           </div>
         </section>
